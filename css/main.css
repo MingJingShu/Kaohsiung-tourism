@@ -176,6 +176,7 @@ option {
     height: 155px;
 }
 #Data-container{
+    display: inline-block;
 	width: 1024px;
 	margin:0 auto;
     overflow: hidden;
@@ -189,9 +190,9 @@ option {
 .Data-content{
 	position: relative;
 }
-.Data-content .col-6{
+/*.Data-content .col-6{
 	padding:0;
-}
+}*/
 .Data-content img{
 	padding: 10px;
 }
@@ -211,25 +212,32 @@ option {
 
 .col-12{
 	width: 100%;
-    float: left;
 }
 
-.col-6{
-	width: 45%;
+/*.col-6{
+	width: 50%;
     float: left;
-    /*border: 1px solid black;*/
+    border: 1px solid black;
    
-}
+}*/
 .Data-set{
+    display: inline-block;
 	position: relative;
     margin-right: 10px;
     margin-bottom: 30px;
     left: 40px;
 }
 .right-set{
-	display: inline-block;
-    float: right;
+    display: inline-block;
+    position: absolute;
+    top: 87px;
+    left: 300px;
+    width: 100%;
 }
+/*.left-set{
+    display:inline-block;
+    float:left;
+}*/
 .container{
 	width: 1080px;
 	margin:0 auto;
