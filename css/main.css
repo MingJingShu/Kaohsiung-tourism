@@ -5,6 +5,9 @@
   clear: both;
 }
 
+body{
+    overflow-x:hidden;
+}
 a{
 	    text-decoration:none;
 }
@@ -39,6 +42,9 @@ option {
     min-height: 1.2em;
     padding: 0px 2px 1px;
 }
+img{
+
+}
 .pages-content ul{
     position: absolute;
     display: inline-block;
@@ -60,9 +66,11 @@ option {
 }
 
 .bg-header{
-	width: 1080px;
-	margin:0 auto;
-    text-align: center;
+	max-width: 1080px;
+    width: 1080px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .drow-bar{
@@ -90,6 +98,7 @@ option {
     border-radius: 8px;
     box-shadow: 0 0px 3px 0px rgba(0,0,0,0.3);
 }
+
 .HotPart p{
 	    position: relative;
 	    top: 18%;
@@ -100,13 +109,16 @@ option {
 
 .HotList{
     position: relative;
+    display: flex;
+    justify-content: space-around;
     top: 30%;
-    left: 55%;
+    left: 50%;
     transform: translateX(-50%);
     letter-spacing: 70px;
     width: 100%;
 
 }
+
 .HotList button{
 	padding:0;
 	border:0;
@@ -176,10 +188,11 @@ option {
     height: 155px;
 }
 #Data-container{
-    display: inline-block;
-	width: 1024px;
-	margin:0 auto;
-    overflow: hidden;
+   display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 1024px;
+    margin: 0 auto;
 }
 
 .Data-title{
@@ -227,6 +240,8 @@ option {
     margin-bottom: 30px;
     left: 40px;
 }
+
+
 .right-set{
     display: inline-block;
     position: absolute;
@@ -300,4 +315,25 @@ option {
 .footer-title2{
 
 	color: gold;
+}
+
+@media (max-width: 1000px){
+    .Data-set {
+        width: 100%;
+
+    }
+
+    .HotPart {
+        left: 27px;
+    }
+        form {
+        position: absolute;
+        top: 150px;
+        left: 30px;
+    }
+
+    .bg-header {
+        display: block;
+    }
+
 }
