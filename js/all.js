@@ -1,4 +1,7 @@
 //抓json資料
+$(document).ready(function(){
+	console.log('ready');
+})
 let MyData;
 const drowbar = document.querySelector('.drow-bar');//表單生成
 
@@ -9,7 +12,7 @@ const hot2=document.getElementById("hot2");
 const hot3=document.getElementById("hot3");
 const hot4=document.getElementById("hot4");
 const currentPart=document.getElementById("currentPart");//當前行政區
-const DataContainer=document.getElementById("Data-container");//資料輸出父級
+const DataContainer=document.getElementById("Data_container");//資料輸出父級
 
 //Click事件偵聽
 
@@ -60,27 +63,27 @@ function Reset (MyData){
 
 //change事件加入
 //const selectPart = document.getElementById("drow-bar");
+//Reset
 var selectPart = document.getElementById("drow-bar");
 	selectPart.addEventListener('change',listClick);
 
 
-}//Reset
-
+}
+//<------------------------------------------------------
 function btnClick(e)
 {
-	
 	let filteredData=dataFilter(e.target.textContent);//資料過濾
 	localStorageData(filteredData);
-	//storedData=JSON.parse(localStorage.getItem('datas'))||[];
+	storedData=JSON.parse(localStorage.getItem('datas'))||[];
 
 	currentPart.innerHTML = e.target.textContent;//行政區打印在網頁
 
 	//顯示前八筆資料 等有切換行為在呼叫getPageNum函式
 	filteredData = filteredData.splice(0,8);
 	showData(filteredData);
-	//console.log('e.target.textContent ='+e.target.textContent);
-	//console.log('btnClick'+e);
-	//console.log('typeof ='+typeof(e));
+	console.log('e.target.textContent ='+e.target.textContent);
+	console.log('btnClick'+e);
+	console.log('typeof ='+typeof(e));
 
 }
 
@@ -109,17 +112,17 @@ function showData(datas)//
 	
 	for(let i =  0; i<datas.length;i++)
 	{
-		insertHTML +=`<div class="Data-set col-6">
-				<div class="Data-title">
+		insertHTML +=`<div class="Data-set col_6">
+				<div class="Data_title">
 					<img class="img-set" src="${datas[i].Picture1}">
 					<p class="part-Name">${datas[i].Name}</p>
 					<p class="part-Name2">${datas[i].Zone}</p>
 				</div>
 				<div class="Data-content clearfix">
-					<div class="col-12"><img src="image/icons_clock.png" alt="openTime-icon">${datas[i].Opentime}</div>
-					<div class="col-12"><img src="image/icons_pin.png" alt="Map_icon">${datas[i].Add}</div>
-					<div class="col-6"><img src="image/icons_phone.png" alt="phone-icon">${datas[i].Tel}</div>
-					<div class="col-6 right-set"><img src="image/icons_tag.png" alt="Tag-icon">${datas[i].Ticketinfo}</div>
+				<div class="col_12 text_wrap"><img src="image/icons_clock.png" alt="openTime-icon"><p>${datas[i].Opentime}</p></div>
+				<div class="col_12 text_wrap"><img src="image/icons_pin.png" alt="Map_icon"><p>${datas[i].Add}</p></div>
+				<div class="col_12 text_wrap"><img src="image/icons_phone.png" alt="phone-icon"><p>${datas[i].Tel}</p></div>
+				<div class="col_12 text_wrap"><img src="image/icons_tag.png" alt="Tag-icon"><p>${datas[i].Ticketinfo}</p></div>
 				</div>
 			</div>
 		`

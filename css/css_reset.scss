@@ -1,0 +1,215 @@
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+
+html{
+  height: 100vh;
+  position: relative;
+  font-size: 16px;
+}
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  position: relative;
+  font-size: 1rem;
+}
+main{
+  position: relative;
+}
+@font-face{
+  font-family: 'my_font';
+  src:local('微軟正黑體');
+  unicode-range: U+4E00-9FFF ,U+2E80-2EFF;
+}
+@font-face{
+  font-family: 'my_font';
+  // src:url(../font/Bahnschrift.TTF);
+  // src:local('微軟正黑體');
+  unicode-range: U+0020-007F;
+}
+@font-face{
+  font-family: 'my_font';
+  // src:url(../font/Bahnschrift.TTF);
+  src:local('微軟正黑體');
+  unicode-range: U+0040;
+}
+@font-face{
+  font-family: 'my_font';
+  // src:url(../font/Bahnschrift.TTF);
+  src:local('微軟正黑體');
+  unicode-range: U+0024;
+}
+// @font-face{
+//   font-family: 'my_font';
+//   src:url(../font/Bahnschrift.TTF);
+//   unicode-range: U+0030-0039,U+002D;
+// }
+//U+0030-U+0039 包含英文都變
+p,
+button,
+input,
+a,
+div,span {
+  // font-family: Microsoft JhengHei;
+  font-family: "my_font";
+}
+span{
+  // font-family: "my_font";
+   font-family: "my_font";
+}
+*{
+  font-family: "my_font";
+}
+
+a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: all;
+  z-index: 10;
+}
+ul,
+li {
+  list-style-type: none;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  // font-size: 100%;
+  // font: inherit;
+  vertical-align: baseline;
+}
+
+
+a {
+    text-decoration: none;
+  }
+
+
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+  list-style: none;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+  display: block;
+}
+
+
+*{
+    outline: none;
+}
+
+
+button {
+    cursor: pointer;
+  }
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
