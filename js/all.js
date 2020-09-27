@@ -1,7 +1,8 @@
 //抓json資料
 $(document).ready(function(){
 	console.log('ready');
-})
+});
+
 let MyData;
 const drowbar = document.querySelector('.drow-bar');//表單生成
 
@@ -25,7 +26,7 @@ hot4.addEventListener('click',btnClick);
 //初始化載入資料
 const request=new XMLHttpRequest();
 //XMLHttpRequest()可讓網路透過js加載json，不用更新網頁就能獲取新的內容
-request.open('GET','https://data.kcg.gov.tw/api/action/datastore_search?resource_id=92290ee5-6e61-456f-80c0-249eae2fcc97');//open開啟請求
+request.open('GET','https://raw.githubusercontent.com/hexschool/KCGTravel/master/datastore_search.json');//open開啟請求
 request.responseType = 'json';//告知server回傳json資料
 request.send();//send傳送請求
 request.onload=function(){//onload，只要傳入請求成功，就會觸發此onload事件
@@ -33,7 +34,6 @@ request.onload=function(){//onload，只要傳入請求成功，就會觸發此o
 	//console.log(typeof(MyData));
 	MyData = MyData.result.records;
 	Reset(MyData);
-
 }
 
 function Reset (MyData){
@@ -66,8 +66,6 @@ function Reset (MyData){
 //Reset
 var selectPart = document.getElementById("drow-bar");
 	selectPart.addEventListener('change',listClick);
-
-
 }
 //<------------------------------------------------------
 function btnClick(e)
@@ -75,7 +73,6 @@ function btnClick(e)
 	let filteredData=dataFilter(e.target.textContent);//資料過濾
 	localStorageData(filteredData);
 	storedData=JSON.parse(localStorage.getItem('datas'))||[];
-
 	currentPart.innerHTML = e.target.textContent;//行政區打印在網頁
 
 	//顯示前八筆資料 等有切換行為在呼叫getPageNum函式

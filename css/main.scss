@@ -212,7 +212,7 @@ option {
   position: relative;
   color: white;
   .img-set {
-    width: 100%;
+    width: 20rem;
     height: 10rem;
   }
 }
@@ -242,8 +242,14 @@ option {
     font-size: 1.25rem;
 }
 .col_6 {
-  width: 50%;
-  float: left;
+  flex: 0 0 50%;
+  max-width: 50%;
+  &:nth-child(odd){
+    padding-right: 1rem;
+  }
+  &:nth-child(even){
+    padding-left: 1rem;
+  }
 }
 .col_12 {
   width: 100%;
@@ -274,17 +280,15 @@ option {
   position: relative;
 }
 .pages {
-	display: inline-block;
+	display: block;
 	position: relative;
-	width: 1080px;
-	height: 2vh;
+  width: 96vw;
+	height: 2rem;
 	margin: 0 auto;
-	text-align: center;
-	bottom: 3vh;
 	ul {
 	  li {
 		float: left;
-		width: 50px;
+    margin-right: 1rem;
 		letter-spacing: 1px;
 		a {
 		  color: black;

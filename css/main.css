@@ -410,7 +410,7 @@ option {
   position: relative;
   color: white; }
   .Data_title .img-set {
-    width: 100%;
+    width: 20rem;
     height: 10rem; }
 
 .Data-content {
@@ -435,8 +435,14 @@ option {
   font-size: 1.25rem; }
 
 .col_6 {
-  width: 50%;
-  float: left; }
+  -webkit-box-flex: 0;
+  -ms-flex: 0 0 50%;
+  flex: 0 0 50%;
+  max-width: 50%; }
+  .col_6:nth-child(odd) {
+    padding-right: 1rem; }
+  .col_6:nth-child(even) {
+    padding-left: 1rem; }
 
 .col_12 {
   width: 100%; }
@@ -461,16 +467,14 @@ option {
   position: relative; }
 
 .pages {
-  display: inline-block;
+  display: block;
   position: relative;
-  width: 1080px;
-  height: 2vh;
-  margin: 0 auto;
-  text-align: center;
-  bottom: 3vh; }
+  width: 96vw;
+  height: 2rem;
+  margin: 0 auto; }
   .pages ul li {
     float: left;
-    width: 50px;
+    margin-right: 1rem;
     letter-spacing: 1px; }
     .pages ul li a {
       color: black; }
