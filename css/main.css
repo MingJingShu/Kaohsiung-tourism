@@ -318,23 +318,6 @@ option {
   min-height: 1.2em;
   padding: 0px 2px 1px; }
 
-.pages-content {
-  position: absolute;
-  display: inline-block;
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-  list-style-type: none; }
-  .pages-content ul {
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    transform: translateX(-50%);
-    list-style-type: none; }
-
 #hot1 {
   background-color: #8a82cc; }
 
@@ -467,17 +450,13 @@ option {
   position: relative; }
 
 .pages {
-  display: block;
-  position: relative;
-  width: 96vw;
-  height: 2rem;
   margin: 0 auto; }
-  .pages ul li {
+  .pages li {
     float: left;
     margin-right: 1rem;
-    letter-spacing: 1px; }
-    .pages ul li a {
-      color: black; }
+    letter-spacing: 1px;
+    color: blue;
+    cursor: pointer; }
 
 .footer_content {
   position: absolute;

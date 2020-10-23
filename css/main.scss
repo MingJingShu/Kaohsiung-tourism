@@ -127,20 +127,6 @@ option {
   min-height: 1.2em;
   padding: 0px 2px 1px;
 }
-.pages-content {
-  ul {
-    position: absolute;
-    display: inline-block;
-    left: 50%;
-    transform: translateX(-50%);
-    list-style-type: none;
-  }
-  position: absolute;
-  display: inline-block;
-  left: 50%;
-  transform: translateX(-50%);
-  list-style-type: none;
-}
 
 #hot1 {
   background-color: #8a82cc;
@@ -236,18 +222,18 @@ option {
   font-size: 1.25rem;
 }
 .part-Name2 {
-	position: absolute;
-    left: 2rem;
-    bottom: 7rem;
-    font-size: 1.25rem;
+  position: absolute;
+  left: 2rem;
+  bottom: 7rem;
+  font-size: 1.25rem;
 }
 .col_6 {
   flex: 0 0 50%;
   max-width: 50%;
-  &:nth-child(odd){
+  &:nth-child(odd) {
     padding-right: 1rem;
   }
-  &:nth-child(even){
+  &:nth-child(even) {
     padding-left: 1rem;
   }
 }
@@ -268,7 +254,6 @@ option {
   margin: 0 auto;
 }
 
-
 .footer {
   position: fixed;
   text-align: center;
@@ -280,22 +265,18 @@ option {
   position: relative;
 }
 .pages {
-	display: block;
-	position: relative;
-  width: 96vw;
-	height: 2rem;
-	margin: 0 auto;
-	ul {
-	  li {
-		float: left;
+  margin: 0 auto;
+  li {
+    float: left;
     margin-right: 1rem;
-		letter-spacing: 1px;
-		a {
-		  color: black;
-		}
-	  }
-	}
+    letter-spacing: 1px;
+    color: blue;
+    cursor: pointer;
+    // a {
+    //   color: black;
+    // }
   }
+}
 .footer_content {
   position: absolute;
   letter-spacing: 2px;
@@ -311,12 +292,10 @@ option {
   color: gold;
 }
 
-
-
 .go-to-top {
-	position: absolute;
-	right: 0vw;
-  }
+  position: absolute;
+  right: 0vw;
+}
 @media screen and (max-width: 600px) {
   html {
     font-size: 14px;
